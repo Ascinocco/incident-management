@@ -1,0 +1,48 @@
+<!--
+Authors : Anthony Scinocco, Alex Andriishyn, Dan Masci, David Yu
+Website : incident-management.azurewebsites.net
+Last Updated : December 2nd, 2015 by Alex
+
+File : register.ejs
+Description : This is our register view. It provides users with the
+			  appropriate form fields in order to create a new User.
+			  At this point, the User is allowed to decide whether
+			  they are a client or an Admin. 
+-->
+
+
+<%- include ./partials/header.ejs %>
+
+<div class="interior-page" id="register-page">
+	<div class="container">
+		<form method="post">
+            <div class="cancel-form"><a href="/login"><i class="fa fa-times"></i></a></div>
+			<% if (messages.length > 0) { %><div class="message"><span><%= messages %></span></div><% } %>
+			<h2>Register</h2>
+			<fieldset class="form-group">
+				<input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" autofocus required>
+			</fieldset>
+			<fieldset class="form-group">
+				<input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" required>
+			</fieldset>
+			<fieldset class="form-group">
+				<input id="email" name="email" type="email" class="form-control" placeholder="Email" required>
+			</fieldset>
+			<fieldset class="form-group">
+				<input id="username" name="username" type="text" class="form-control" placeholder="Username" required>
+			</fieldset>
+			<fieldset class="form-group">
+				<input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
+			</fieldset>
+			<fieldset class="form-group">
+				<select id="role" name="role" class="form-control">
+					<option value="1">Client Account</option>
+					<option value="2">Administrative Account</option>
+				</select>
+			</fieldset>
+			<button type="submit" class="btn btn-primary">Register</button>
+		</form>
+	</div><!-- container -->
+</div><!-- #register-page -->
+
+<%- include ./partials/footer.ejs %>

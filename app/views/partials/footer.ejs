@@ -1,0 +1,45 @@
+<!--
+Authors : Anthony Scinocco, Alex Andriishyn, Dan Masci, David Yu
+Website : incident-management.azurewebsites.net
+Last Updated : December 10th, 2015 by Dan
+
+File: footer.ejs
+Description : This is our common footer partial that we use on every page.
+			  It includes access to the authors' emails and a fake copyright.
+-->
+
+
+
+	<footer>
+		<div class="container">
+			<div class="social">
+				<div class="author left"><a href="mailto:scinocco.a@gmail.com">
+					<i class="fa fa-envelope"></i>
+					<span class="name">Anthony Scinocco</span></a>
+				</div>
+				<div class="author right"><a href="mailto:alex.andriishyn@icloud.com">
+					<i class="fa fa-envelope"></i>
+            		<span class="name">Alex Andriishyn</span></a>
+            	</div>
+				<div class="author left"><a href="mailto:dsmasci@gmail.com">
+					<i class="fa fa-envelope"></i>
+            		<span class="name">Daniel Masci</span></a>
+				</div>
+				<div class="author right"><a href="mailto:davidyu89tech@gmail.com">
+					<i class="fa fa-envelope"></i>
+            		<span class="name">David Yu</span></a>
+            	</div>
+			</div><!-- social -->
+			<div class="clear-float"></div>
+			<div class="copyright">
+            	<p id="copyright">Copyright &copy; 2015 IncidentManagement.<br>All Rights Reserved.</p>
+			</div>
+
+		</div><!-- container -->
+	</footer>
+
+	<% include boot.ejs %>
+	<!-- custom js/jQuery -->
+	<script src="/js/main.js"></script>
+</body>
+</html>

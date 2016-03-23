@@ -1,0 +1,306 @@
+/**
+* Author : Dan Masci
+* Class : Advanced Web Programming
+* Semester : 3
+* Professor : Tom Tsiliopolous
+* Purpose : Final Team Project - Incident Management
+* Last Updated By : Dan Masci (12/7/2015)
+*/
+
+/**
+* The follwing stylesheet is the File used for all Responsive styling.
+*
+*/
+
+@media screen and (max-width: 1060px) {
+
+	#incident-dashboard {
+		.tickets {
+			.ticket-tabular {
+				.ticket-container {
+					.ticket-head {
+						.update {
+							background: darken(@silver, 10%);						
+						}//.update
+					}//.ticket-head				
+				}//.ticket-container
+			}//.ticket-tabular
+			.ticket-full {
+				.ticket-container {
+					.ticket {
+						.title {
+							.update-ticket {
+								background: @offWhite;
+								&:hover {
+									background: @offWhite;
+								}
+							}//.update-ticket
+						}//.title
+					}//.ticket
+				}//.ticket-single
+			}//.ticket-full
+		}//.tickets
+	}//#incident-dashboard
+
+}//1060px
+
+@media screen and (max-width: 640px) {
+	header {
+		.logo {
+			left: 12px;
+		}//.logo
+		.menu {
+			> li {
+				> a {
+					font-size: 20px;
+					padding: 40px 10px;
+				}//.menu li a
+				.sub-menu {					
+					left: 88px;
+					.exit {
+						left: -88px;	
+						width: 88px;
+					}
+					> li {
+						> a {
+							font-size: 18px;
+							padding: 14px 0;						
+						}//.sub-menu li a
+					}//.sub-menu li
+				}//.sub-menu
+			}//.menu li
+		}//.menu
+	}//header
+	#user-dashboard {
+		.clear-float.mobile {
+			display: block;
+		}
+		.user-filter {		
+			float: none;			
+			.buttons {
+				width: 100%;
+				float: left;	
+				font-size: 20px;
+				.filter-button {	
+					width: 33.33%;	
+					&::before {
+						opacity: 1;
+						border: 8px solid transparent;	
+						border-top-color: @lightBlue;	
+					}
+					&.active::before {
+						display: none;
+					}
+				}//.filter-button
+				.user-shield {
+					position: absolute;
+					width: calc(~"33.33% + 10px");
+					height: 130%;
+					top: -15%;
+					&.All {
+						left: -5px;
+					}
+					&.Client {
+						left: calc(~"33.33% - 5px");
+					}
+					&.Admin {
+						left: calc(~"66.66% - 5px");
+					}
+				}//.user-shield
+			}//.buttons		
+		}//.user-filter	
+		.user-container {
+			.user-head {
+				font-size: 24px;			
+				.username {
+					font-size: 24px;					
+				}//.username
+				.update {
+					background: darken(@silver, 10%);
+				}//.update
+			}//.user-head
+			.user-content {			
+				font-size: 20px;				
+			}//.user-content
+		}//.user-container	
+	}//#user-dashboard
+	#incident-dashboard {
+		.clear-float.mobile {
+			display: block;
+		}
+		.filter {
+			width: 100%;
+			&.view-filter {
+				float: none;
+				.buttons {
+					float: left;
+					.filter-button {
+						width: 50%;
+					}
+				}
+			}
+			&.ticket-filter {
+				float: none;
+				.buttons {
+					float: right;
+					.filter-button {
+						width: 33.33%;
+					}
+				}
+			}
+			.buttons {
+				margin: 10px 0;
+				font-size: 20px;
+				width: 100%;
+				float: none;
+				.filter-button {
+					&::before {					
+						border: 8px solid transparent;	
+						border-top-color: @lightBlue;				
+						opacity: 1;
+					}
+					&.active::before {
+						display: none;
+					}
+				}//.filter-button
+				.view-shield {
+					width: calc(~"50% + 10px");
+					&.Tab {
+						left: -5px;
+					}
+					&.Full {
+						left: calc(~"50% - 5px");
+					}
+				}//.shield
+				.status-shield {										
+					width: calc(~"33.33% + 10px");
+					&.Open {
+						left: -5px;
+					}
+					&.Closed {
+						left: calc(~"33.33% - 5px");
+					}
+					&.All {
+						left: calc(~"66.66% - 5px");
+					}
+					&.Disabled {
+						left: -5px;
+						width: calc(~"100% + 10px");
+					}
+				}//.status-shield
+			}//.buttons		
+		}//.ticket-filter
+		.tickets {
+			.ticket-tabular{
+				.ticket-container {			
+					.ticket-head {
+						font-size: 24px;
+					}//.ticket-head
+					.ticket-content {
+						font-size: 20px;
+						padding: 10px;
+						.content-head {
+							.owner {
+								float: none;
+								display: block;
+								width: 100%;
+							}//.ticket-owner
+							.id {
+								float: none;
+								display: block;
+								width: 100%;
+							}//.ticket-id
+						}//.content-head
+						.content-body {
+						}//.content-body
+					}//.ticket-content
+				}//.ticket-container
+			}//.ticket-tabular
+			.ticket-full {				
+				.ticket-container {
+					padding-top: 40px;
+					.ticket-count {
+						top: 15px;
+						width: 65px;
+						font-size: 32px;
+					}//.ticket-count					
+					.navigation {						
+						padding-bottom: 50px;
+						.arrow {
+							.fa {
+								font-size: 48px;
+							}
+						}
+					}//.navigation
+					.ticket {
+						.ticket-head {
+							font-size: 20px;
+						}//.ticket-head
+						.ticket-content {
+							font-size: 20px;
+							h3 {
+								font-size: 24px;
+							}								
+							.narratives {
+								margin: 0 -20px;
+								border: 0;
+								.round(0);
+								.narrative {
+									padding: 10px 20px;
+									&:first-child {
+										.round(0);
+									}
+									&:last-child {
+										.round(0);
+									}
+								}					
+							}//.narrative
+						}//.ticket-content
+					}//.ticket
+				}//.ticket-single
+			}//#ticket-full
+		}//.tickets
+	}//#incident-dashboard
+
+}//640px
+
+@media screen and (max-width: 500px) {
+	.interior-page {
+		padding: 60px 0 100px 0;
+		form {
+			.box-shadow(0, 0, 0, transparent);
+			background: transparent;
+			padding: 0 10px;
+			.cancel-form {
+				position: absolute;
+				top: -40px;
+			}//.cancel-form
+		}//form
+	}//.interior-page
+	footer {
+		.social {			
+			width: 100%;
+			.author {
+				width: 100%;
+				text-align: center;
+				&.left {
+					width: 100%;
+					float: none;
+				}
+				&.right {
+					width: 100%;
+					float: none;
+				}
+				.name {
+					font-size: 18px;
+				}//.name
+			}//.author
+		}//.social
+		.copyright {
+			#copyright {
+				font-size: 18px;
+			}//#copyright
+		}//.copyright
+	}//footer
+
+}//500px
